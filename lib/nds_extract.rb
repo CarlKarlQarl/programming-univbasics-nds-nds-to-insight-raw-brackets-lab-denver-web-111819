@@ -27,4 +27,4 @@ end
 
 #pp directors_database[0] # directors
 #pp directors_database[0][:movies] #movies
-pp directors_database[0][:movies]
+pp directors_database[0][:movies][0]

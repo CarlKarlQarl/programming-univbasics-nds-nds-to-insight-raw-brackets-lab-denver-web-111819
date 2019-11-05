@@ -22,17 +22,21 @@ def directors_totals(nds)
   
   nds.length.times do |cycle_directors|
     total_gross = 0
+    
     nds[cycle_directors][:movies].length.times do |cycle_titles|
       total_gross += nds[cycle_directors][:movies][cycle_titles][:worldwide_gross]
     end
+    
     result[nds[cycle_directors][:name]] = total_gross
+    
   end
   
   return result
+  
 end
 
 #pp directors_database[0] # directors
 #pp directors_database[0][:movies] #movies
 #pp directors_database[0][:movies][0] #single title
 #pp directors_database[0][:movies][0][:worldwide_gross] #gross
-pp directors_totals(directors_database)
+##pp directors_totals(directors_database)

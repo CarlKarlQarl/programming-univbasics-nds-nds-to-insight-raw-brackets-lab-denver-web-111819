@@ -20,9 +20,15 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
   
+  nds.length.times do |cycle_directors|
+    total_gross = 0
+    nds[cycle_directors][:movies].length.times do |cycle_titles|
+      total_gross += nds[cycle_directors][:movies][cycle_titles][:worldwide_gross]
+    end
+    result
+  end
   
-  
-  nil
+  return result
 end
 
 #pp directors_database[0] # directors
